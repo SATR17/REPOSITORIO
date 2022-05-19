@@ -1,25 +1,111 @@
 <!DOCTYPE html>
-    <html lang ="es">
-    <head>
-        <meta charset = "UTF-8">
-        <meta http-equiv = "X-UA-Compatible" content="IE = edge">
-        <meta name = "viewport" content="width-device-width, initial-scale=1.0">
-        <title>Etiquetas HTML5</title>
-    </head>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta Cinematográfica</title>
+    <link rel="icon" href="img/favicon1.ico">
+
+    <style>
+        body {
+            background-color: #000000;
+        }
+
+        div {
+            background-color: white;
+            border: 1px solid black;
+            padding: 12px;
+            width: 80%;
+            margin: 0 auto;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        fieldset {
+            margin-bottom: 12px;
+        }
+
+        legend {
+            background-color: hsl(283, 100%, 81%);
+            padding: 5px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
 <body>
-    <header> Cabecera </header>
-        <nav>
-            enlace 1 enlace 2
-        </nav>
-<main>
-    <section>
-        <article> Contenido 1 </article>
-        <article> Contenido 2 </article>
-    </section>
-    <aside>
-        enlace de interes
-    </aside>
-</main>
-    <footer> Pie de página </footer>
+
+    <div id="Contenedor">
+        <h2 style="color:#8521c7;border:3px solid #000000;text-align:center;">Encuesta de cine: Nominadas al Oscar 2022
+        </h2>
+
+        <form id="formulario1" name="formulario1" method="post" action="data.php">
+
+            <fieldset id="datos_personales" style="background-color:rgb(250, 215, 160);">
+
+                <legend style="text-align:center;">Datos Personales</legend>
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre"> <br>
+                <br>
+                <label for="apellido">Apellido:</label>
+                <input type="text" name="apellido" id="apellido"><br>
+                <br>
+                <label for="dni">DNI:</label>
+                <input type="text" name="dni" id="dni" maxlength="9"><br>
+                <br>
+                <label for="edad">Edad:</label>
+                <input type="text" name="edad" id="edad" size="2" maxlength="2"><br>
+                <br>
+                <label for="sexo">Sexo:</label>
+                <select name="sexo" id="sexo">
+                    <option selected="selected">Femenino</option>
+                    <option>Masculino</option>
+                </select>
+            </fieldset>
+            <br>
+
+            <fieldset id="mejor película"
+                style="background-color:rgb(250, 215, 160);float: left; width: 46%; text-align: justify;">
+                <legend style="text-align:center;">Mejor Película</legend>
+                <input type="radio" name="pelicula" value="11"> Soy leyenda <br>
+                <img src="img/peli1.jpg" alt="Soy leyenda" width="200" height="300"><br>
+                <input type="radio" name="pelicula" value="22"> Guerra mundial z <br>
+                <img src="img/peli2.jpg" alt="Guerra mundial Z " width="200" height="300"><br>
+
+
+            </fieldset>
+
+            <fieldset id="pelicula vista"
+                style="background-color:rgb(250, 215, 160); float: right; width: 48%; text-align: justify;">
+                <legend style="text-align:center;">Selecciona las películas que no hayas visto</legend>
+                <input type="radio" name="pelicula" value="11"> Lluvia de hamburguesas <br>
+                <img src="img/peli3.jpg" alt="Lluvia de hamburguesas" width="200" height="250"> <br>
+                <input type="radio" name="pelicula" value="22">Familia del futuro<br>
+                <img src="img/peli4.jpg" alt="Lluvia de hamburguesas" width="200" height="280"><br>
+
+            </fieldset>
+            <br>
+
+            <fieldset id="grupo_argumento" style="background-color:rgb(250, 215, 160);">
+
+                <legend style="text-align:center;">Argumento de la película que más te gusta</legend>
+                <textarea name="argumento" id="argumento" cols="60" rows="11"></textarea>
+            </fieldset>
+
+            <br>
+
+            <input type="reset" value="Borrar Formulario"
+                style="background-color:#8521c7; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: white;">
+            <input type="submit" value="Enviar"
+                style="background-color: #8521c7; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; float: right;">
+
+
+        </form>
+    </div>
+
 </body>
-</html>
+
+</html> 

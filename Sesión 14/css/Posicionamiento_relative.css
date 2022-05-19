@@ -13,6 +13,9 @@
 
 #caja3{
     background-color:green ;
+    position:relative;
+    top: -60px;
+    left: 100px;
 }
 
 #caja4{

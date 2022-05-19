@@ -13,8 +13,12 @@
 
 #caja3{
     background-color:green ;
+    position: static;
+    top: -60px;
+    left: 100px;
 }
 
 #caja4{
     background-color:yellow ;
+
 }
